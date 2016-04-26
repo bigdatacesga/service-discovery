@@ -1,12 +1,13 @@
 Consul Service Discovery API
 ----------------------------
 This module provides a simple way to work with the 
-[Consul Service Discovery API](https://www.consul.io/docs/agent/http.html)
+`Consul Service Discovery API <https://www.consul.io/docs/agent/http.html>`_
 from python.
 
 
 Examples
 --------
+Usage examples::
 
     import consul
     service = consul.Client()
@@ -20,13 +21,13 @@ Examples
     service.list()
     service.info(name='flexlm')
 
-The registration/deregistration is done using the consul agent API:
+The registration/deregistration is done using the consul agent API::
 
     http://localhost:8500
     PUT /v1/agent/service/register
     DELETE /v1/agent/service/deregister/<serviceId>
 
-To query the information the catalog API is used:
+To query the information the catalog API is used::
 
     http://localhost:8500
     GET /v1/catalog/services
@@ -34,7 +35,7 @@ To query the information the catalog API is used:
     GET /v1/catalog/nodes
     GET /v1/catalog/node/c13-9
 
-The payload for the registration request has the following format:
+The payload for the registration request has the following format::
 
     {
       "ID": "flexlm1",
@@ -50,4 +51,3 @@ The payload for the registration request has the following format:
         "timeout": "2s"
       }
     }
-
