@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='consul-service-discovery',
-    version='0.1.0',
+    version='0.1.1',
     author='Javier Cacheiro',
     author_email='javier.cacheiro@gmail.com',
     url='https://github.com/javicacheiro/consul-service-discovery',
