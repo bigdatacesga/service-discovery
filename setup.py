@@ -8,7 +8,7 @@ setup(
     author='Javier Cacheiro',
     author_email='javier.cacheiro@gmail.com',
     url='https://github.com/javicacheiro/consul-service-discovery',
-    download_url='https://github.com/javicacheiro/consul-service-discovery/tarball/0.1.0',
+    download_url='https://github.com/javicacheiro/consul-service-discovery/tarball/0.1.1',
     license='MIT',
     description='Python client for Consul Service Discovery API',
     long_description=open('README.rst').read(),
