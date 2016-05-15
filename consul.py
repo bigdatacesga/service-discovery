@@ -92,7 +92,7 @@ class Client(object):
         service['Name'] = name
         service['Address'] = address
         if port:
-            service['Port'] = port
+            service['Port'] = int(port)
         if tags:
             service['Tags'] = tags
         if check:
