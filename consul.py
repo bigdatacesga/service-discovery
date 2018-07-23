@@ -17,7 +17,7 @@ Examples:
 The registration/deregistration is done using the consul agent API:
     http://localhost:8500
     PUT /v1/agent/service/register
-    DELETE /v1/agent/service/deregister/<serviceId>
+    PUT /v1/agent/service/deregister/<serviceId>
 
 To query the information the catalog API is used:
     http://localhost:8500
@@ -73,7 +73,7 @@ class Client(object):
     The registration/deregistration is done using the consul agent API:
 
         PUT /v1/agent/service/register
-        DELETE /v1/agent/service/deregister/<serviceId>
+        PUT /v1/agent/service/deregister/<serviceId>
     """
 
     def __init__(self, endpoint='http://localhost:8500'):
@@ -105,10 +105,10 @@ class Client(object):
 
     def deregister(self, id):
         """Deregister a service with the local consul agent"""
-        r = requests.delete('{}/{}'.format(self.url_deregister, id))
+        r = requests.put('{}/{}'.format(self.url_deregister, id))
         if r.status_code != 200:
             raise consulDeregistrationError(
-                'DELETE returned {}'.format(r.status_code))
+                'PUT returned {}'.format(r.status_code))
         return r
 
     def list(self):
