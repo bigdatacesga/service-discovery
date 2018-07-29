@@ -25,7 +25,7 @@ The registration/deregistration is done using the consul agent API::
 
     http://localhost:8500
     PUT /v1/agent/service/register
-    DELETE /v1/agent/service/deregister/<serviceId>
+    PUT /v1/agent/service/deregister/<serviceId>
 
 To query the information the catalog API is used::
 
