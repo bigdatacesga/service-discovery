@@ -80,10 +80,10 @@ class Client(object):
         self.endpoint = endpoint
         self.url_register = '{}/{}'.format(self.endpoint, 'v1/agent/service/register')
         self.url_deregister = '{}/{}'.format(self.endpoint, 'v1/agent/service/deregister')
-        self.url_services = '{}/{}'.format(self.endpoint, '/v1/catalog/services')
-        self.url_service = '{}/{}'.format(self.endpoint, '/v1/catalog/service')
-        self.url_nodes = '{}/{}'.format(self.endpoint, '/v1/catalog/nodes')
-        self.url_node = '{}/{}'.format(self.endpoint, '/v1/catalog/node')
+        self.url_services = '{}/{}'.format(self.endpoint, 'v1/catalog/services')
+        self.url_service = '{}/{}'.format(self.endpoint, 'v1/catalog/service')
+        self.url_nodes = '{}/{}'.format(self.endpoint, 'v1/catalog/nodes')
+        self.url_node = '{}/{}'.format(self.endpoint, 'v1/catalog/node')
 
     def register(self, id, name, address, port=None, tags=None, check=None):
         """Register a new service with the local consul agent"""
